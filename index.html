@@ -2,24 +2,28 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Ultimate AI Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate AI Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header><h1>🚀 Ultimate AI Hub</h1></header>
 
     <div class="tabs">
-        <button onclick="showTab('chat')">🤖 Chat & AI</button>
-        <button onclick="showTab('writing')">✍️ Writing</button>
-        <button onclick="showTab('design')">🎨 Design</button>
-        <button onclick="showTab('video')">🎥 Video</button>
-        <button onclick="showTab('code')">💻 Code</button>
-        <button onclick="showTab('research')">🔬 Research</button>
+        <button onclick="renderCategory('chat')">🤖 Chat & AI</button>
+        <button onclick="renderCategory('writing')">✍️ Writing</button>
+        <button onclick="renderCategory('design')">🎨 Design</button>
+        <button onclick="renderCategory('video')">🎥 Video</button>
+        <button onclick="renderCategory('code')">💻 Code</button>
+        <button onclick="renderCategory('research')">🔬 Research</button>
     </div>
 
-    <main id="content" class="dashboard">
-        </main>
+    <main id="content" class="dashboard"></main>
 
     <script src="script.js"></script>
 </body>
 </html>
+    <script src="script.js"></script>
+</body>
+</html>
+
