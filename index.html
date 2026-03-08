@@ -2,62 +2,24 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tools Dashboard</title>
+    <title>Ultimate AI Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>AI TOOLS DASHBOARD</h1></header>
-    <main class="dashboard">
-        
-        <section class="category">
-            <h3>🤖 Chatbot & AI</h3>
-            <div class="tool-list">
-                <a href="https://chatgpt.com" target="_blank">ChatGPT</a>
-                <a href="https://claude.ai" target="_blank">Claude</a>
-                <a href="https://gemini.google.com" target="_blank">Gemini</a>
-                <a href="https://deepseek.com" target="_blank">DeepSeek</a>
-                <a href="https://grok.com" target="_blank">Grok</a>
-                <a href="https://perplexity.ai" target="_blank">Perplexity</a>
-                <a href="https://poe.com" target="_blank">Poe</a>
-                <a href="https://mistral.ai" target="_blank">Le Chat (Mistral)</a>
-                <a href="https://pi.ai" target="_blank">Pi (Inflection)</a>
-            </div>
-        </section>
+    <header><h1>🚀 Ultimate AI Hub</h1></header>
 
-        <section class="category">
-            <h3>✍️ Writing</h3>
-            <div class="tool-list">
-                <a href="https://grammarly.com" target="_blank">Grammarly</a>
-                <a href="https://copy.ai" target="_blank">CopyAI</a>
-                <a href="https://jasper.ai" target="_blank">Jasper</a>
-                <a href="https://notion.so" target="_blank">Notion AI</a>
-                <a href="https://quillbot.com" target="_blank">QuillBot</a>
-            </div>
-        </section>
+    <div class="tabs">
+        <button onclick="showTab('chat')">🤖 Chat & AI</button>
+        <button onclick="showTab('writing')">✍️ Writing</button>
+        <button onclick="showTab('design')">🎨 Design</button>
+        <button onclick="showTab('video')">🎥 Video</button>
+        <button onclick="showTab('code')">💻 Code</button>
+        <button onclick="showTab('research')">🔬 Research</button>
+    </div>
 
-        <section class="category">
-            <h3>🎨 Design</h3>
-            <div class="tool-list">
-                <a href="https://midjourney.com" target="_blank">Midjourney</a>
-                <a href="https://ideogram.ai" target="_blank">Ideogram</a>
-                <a href="https://canva.com" target="_blank">Canva</a>
-                <a href="https://adobe.com/firefly" target="_blank">Firefly</a>
-                <a href="https://leonardo.ai" target="_blank">Leonardo</a>
-            </div>
-        </section>
+    <main id="content" class="dashboard">
+        </main>
 
-        <section class="category">
-            <h3>🎥 Video</h3>
-            <div class="tool-list">
-                <a href="https://veed.io" target="_blank">Veed.io</a>
-                <a href="https://heygen.com" target="_blank">HeyGen</a>
-                <a href="https://invideo.io" target="_blank">InVideo</a>
-                <a href="https://descript.com" target="_blank">Descript</a>
-                <a href="https://fliki.ai" target="_blank">Fliki</a>
-            </div>
-        </section>
-
-    </main>
+    <script src="script.js"></script>
 </body>
 </html>
