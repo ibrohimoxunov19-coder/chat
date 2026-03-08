@@ -1,0 +1,11 @@
+body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: white; padding: 20px; }
+h1 { text-align: center; color: #00d2ff; }
+.dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.category { background: #16213e; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.category h3 { border-bottom: 2px solid #00d2ff; padding-bottom: 10px; }
+.tool-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tool-list a { 
+    background: #0f3460; padding: 10px; text-decoration: none; color: white; 
+    border-radius: 8px; text-align: center; transition: 0.3s; font-size: 14px; 
+}
+.tool-list a:hover { background: #00d2ff; color: #1a1a2e; transform: translateY(-3px); }
