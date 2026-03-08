@@ -1,11 +1,18 @@
-body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: white; padding: 20px; }
-h1 { text-align: center; color: #00d2ff; }
-.dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.category { background: #16213e; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.category h3 { border-bottom: 2px solid #00d2ff; padding-bottom: 10px; }
+/* Asosiy sozlamalar */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+h1 { text-align: center; color: #38bdf8; margin-bottom: 30px; }
+
+/* Dashboard paneli */
+.dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+/* Kategoriyalar */
+.category { background: #1e293b; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+.category h3 { border-bottom: 2px solid #38bdf8; padding-bottom: 10px; margin-top: 0; }
+
+/* Tugmalar ro'yxati */
 .tool-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .tool-list a { 
-    background: #0f3460; padding: 10px; text-decoration: none; color: white; 
-    border-radius: 8px; text-align: center; transition: 0.3s; font-size: 14px; 
+    background: #334155; padding: 12px; text-decoration: none; color: #e2e8f0; 
+    border-radius: 6px; text-align: center; transition: all 0.3s ease; font-size: 14px; 
 }
-.tool-list a:hover { background: #00d2ff; color: #1a1a2e; transform: translateY(-3px); }
+.tool-list a:hover { background: #38bdf8; color: #0f172a; transform: translateY(-2px); font-weight: bold; }
