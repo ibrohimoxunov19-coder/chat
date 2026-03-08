@@ -1,8 +1,8 @@
-body { font-family: sans-serif; background: #0f172a; color: white; padding: 20px; }
+body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; }
+h1 { text-align: center; color: #38bdf8; }
 .tabs { display: flex; gap: 10px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
-.tabs button { background: #1e293b; border: none; padding: 10px 20px; color: white; border-radius: 5px; cursor: pointer; }
-.tabs button:hover { background: #38bdf8; }
-.dashboard { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
-.tool-card { background: #1e293b; padding: 20px; border-radius: 10px; text-align: center; text-decoration: none; color: white; border: 1px solid #334155; }
-.tool-card:hover { border-color: #38bdf8; transform: translateY(-5px); }
-
+.tabs button { background: #1e293b; border: 1px solid #334155; padding: 10px 15px; color: white; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+.tabs button:hover { background: #38bdf8; color: #0f172a; }
+.dashboard { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+.tool-card { background: #1e293b; padding: 20px; border-radius: 12px; text-align: center; text-decoration: none; color: white; border: 1px solid #334155; transition: 0.3s; }
+.tool-card:hover { border-color: #38bdf8; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2); }
