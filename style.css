@@ -1,18 +1,8 @@
-/* Asosiy sozlamalar */
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
-h1 { text-align: center; color: #38bdf8; margin-bottom: 30px; }
+body { font-family: sans-serif; background: #0f172a; color: white; padding: 20px; }
+.tabs { display: flex; gap: 10px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
+.tabs button { background: #1e293b; border: none; padding: 10px 20px; color: white; border-radius: 5px; cursor: pointer; }
+.tabs button:hover { background: #38bdf8; }
+.dashboard { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+.tool-card { background: #1e293b; padding: 20px; border-radius: 10px; text-align: center; text-decoration: none; color: white; border: 1px solid #334155; }
+.tool-card:hover { border-color: #38bdf8; transform: translateY(-5px); }
 
-/* Dashboard paneli */
-.dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-
-/* Kategoriyalar */
-.category { background: #1e293b; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-.category h3 { border-bottom: 2px solid #38bdf8; padding-bottom: 10px; margin-top: 0; }
-
-/* Tugmalar ro'yxati */
-.tool-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.tool-list a { 
-    background: #334155; padding: 12px; text-decoration: none; color: #e2e8f0; 
-    border-radius: 6px; text-align: center; transition: all 0.3s ease; font-size: 14px; 
-}
-.tool-list a:hover { background: #38bdf8; color: #0f172a; transform: translateY(-2px); font-weight: bold; }
