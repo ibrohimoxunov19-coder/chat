@@ -24,12 +24,13 @@ const db = {
     marketing: [{name: "Semrush", url: "https://semrush.com"}, {name: "AdCopy", url: "https://adcopy.ai"}]
 };
 
-// Login/Logout logikasi
+// Login/Logout funksiyasi
 document.getElementById('authBtn').addEventListener('click', () => {
     if (auth.currentUser) signOut(auth);
     else signInWithPopup(auth, provider);
 });
 
+// Foydalanuvchi holatini tekshirish
 onAuthStateChanged(auth, (user) => {
     const welcome = document.getElementById('welcomeMsg');
     const btn = document.getElementById('authBtn');
@@ -42,7 +43,7 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-// Menyuni render qilish
+// Menyuni yuklash
 document.querySelectorAll('#menu button').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const cat = e.target.getAttribute('data-cat');
@@ -51,6 +52,3 @@ document.querySelectorAll('#menu button').forEach(btn => {
         ).join('');
     });
 });
-
-// Boshlang'ich sahifa
-document.getElementById('content').innerHTML = '<h2>Kategoriyani tanlang</h2>';
