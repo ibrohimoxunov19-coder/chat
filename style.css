@@ -8,4 +8,3 @@ button:hover { background: #38bdf8; }
 .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
 .tool-card { background: #1e293b; padding: 20px; border-radius: 10px; text-decoration: none; color: white; text-align: center; border: 1px solid #334155; }
 .tool-card:hover { border-color: #38bdf8; }
-
