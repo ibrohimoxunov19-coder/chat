@@ -75,18 +75,18 @@ onAuthStateChanged(auth, (user) => {
     const menu = document.getElementById('menu');
     const welcome = document.getElementById('welcomeMsg');
     const btn = document.getElementById('authBtn');
-    const content = document.getElementById('content');
-
+    
     if (user) {
         welcome.innerText = `Xush kelibsiz, ${user.displayName}! 👋`;
         btn.innerText = "Chiqish";
-        menu.style.display = "flex";
-        content.innerHTML = "<h3>Kerakli kategoriyani tanlang</h3>";
+        // MENYU VA TUGMALARNI KO'RSATISH
+        menu.style.display = "flex"; 
     } else {
         welcome.innerText = "Davom etish uchun tizimga kiring.";
         btn.innerText = "👤 Login";
+        // MENYU VA TUGMALARNI YASHIRISH
         menu.style.display = "none";
-        content.innerHTML = "<h3>Iltimos, Login qiling.</h3>";
+        document.getElementById('content').innerHTML = ""; // Login chiqsa, chatlarni ham o'chirib tashla
     }
 });
 
