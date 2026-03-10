@@ -9,8 +9,10 @@ const firebaseConfig = {
   messagingSenderId: "138275981388",
   appId: "1:138275981388:web:794065c29d63986ee9cce9"
 };
+
 const auth = getAuth(initializeApp(firebaseConfig));
 const provider = new GoogleAuthProvider();
+
 const db = {
     chat: [
         {name: "ChatGPT", url: "https://chatgpt.com"},
@@ -67,6 +69,14 @@ const db = {
         {name: "HubSpot AI", url: "https://hubspot.com"},
         {name: "Buffer", url: "https://buffer.com"},
         {name: "Canva Marketing", url: "https://canva.com"}
+    ],
+    productivity: [
+        {name: "Notion", url: "https://notion.so"},
+        {name: "Trello", url: "https://trello.com"},
+        {name: "Todoist", url: "https://todoist.com"},
+        {name: "ClickUp", url: "https://clickup.com"},
+        {name: "Slack", url: "https://slack.com"},
+        {name: "Obsidian", url: "https://obsidian.md"}
     ]
 };
 
@@ -79,14 +89,12 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         welcome.innerText = `Xush kelibsiz, ${user.displayName}! 👋`;
         btn.innerText = "Chiqish";
-        // MENYU VA TUGMALARNI KO'RSATISH
         menu.style.display = "flex"; 
     } else {
         welcome.innerText = "Davom etish uchun tizimga kiring.";
         btn.innerText = "👤 Login";
-        // MENYU VA TUGMALARNI YASHIRISH
         menu.style.display = "none";
-        document.getElementById('content').innerHTML = ""; // Login chiqsa, chatlarni ham o'chirib tashla
+        document.getElementById('content').innerHTML = "<h3>Saytdan foydalanish uchun Login qiling.</h3>";
     }
 });
 
@@ -95,11 +103,15 @@ document.getElementById('authBtn').addEventListener('click', () => {
     else signInWithPopup(auth, provider);
 });
 
+// Kategoriyani bosganda ma'lumotlarni chiqarish
 document.querySelectorAll('#menu button').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const cat = e.target.getAttribute('data-cat');
-        document.getElementById('content').innerHTML = db[cat].map(t => 
-            `<a href="${t.url}" target="_blank" class="tool-card"><h3>${t.name}</h3></a>`
-        ).join('');
+        // Xatolik bo'lmasligi uchun tekshiramiz
+        if (db[cat]) {
+            document.getElementById('content').innerHTML = db[cat].map(t => 
+                `<a href="${t.url}" target="_blank" class="tool-card"><h3>${t.name}</h3></a>`
+            ).join('');
+        }
     });
 });
