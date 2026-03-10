@@ -9,11 +9,8 @@ const firebaseConfig = {
   messagingSenderId: "138275981388",
   appId: "1:138275981388:web:794065c29d63986ee9cce9"
 };
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const auth = getAuth(initializeApp(firebaseConfig));
 const provider = new GoogleAuthProvider();
-
 const db = {
     chat: [
         {name: "ChatGPT", url: "https://chatgpt.com"},
@@ -74,25 +71,30 @@ const db = {
 };
 
 // Login/Logout logikasi
+onAuthStateChanged(auth, (user) => {
+    const menu = document.getElementById('menu');
+    const welcome = document.getElementById('welcomeMsg');
+    const btn = document.getElementById('authBtn');
+    const content = document.getElementById('content');
+
+    if (user) {
+        welcome.innerText = `Xush kelibsiz, ${user.displayName}! 👋`;
+        btn.innerText = "Chiqish";
+        menu.style.display = "flex";
+        content.innerHTML = "<h3>Kerakli kategoriyani tanlang</h3>";
+    } else {
+        welcome.innerText = "Davom etish uchun tizimga kiring.";
+        btn.innerText = "👤 Login";
+        menu.style.display = "none";
+        content.innerHTML = "<h3>Iltimos, Login qiling.</h3>";
+    }
+});
+
 document.getElementById('authBtn').addEventListener('click', () => {
     if (auth.currentUser) signOut(auth);
     else signInWithPopup(auth, provider);
 });
 
-// Foydalanuvchi holatini kuzatish
-onAuthStateChanged(auth, (user) => {
-    const welcome = document.getElementById('welcomeMsg');
-    const btn = document.getElementById('authBtn');
-    if (user) {
-        welcome.innerText = `Xush kelibsiz, ${user.displayName}! 👋`;
-        btn.innerText = "Chiqish";
-    } else {
-        welcome.innerText = "Davom etish uchun tizimga kiring.";
-        btn.innerText = "👤 Login";
-    }
-});
-
-// Menyuni render qilish
 document.querySelectorAll('#menu button').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const cat = e.target.getAttribute('data-cat');
