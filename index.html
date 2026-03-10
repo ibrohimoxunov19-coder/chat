@@ -2,28 +2,28 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate AI Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
+        <button id="authBtn" class="auth-btn">👤 Login</button>
         <h1>🚀 Ultimate AI Hub</h1>
-        <nav class="tabs">
-            <button onclick="renderCategory('chat')">🤖 Chat</button>
-            <button onclick="renderCategory('writing')">✍️ Writing</button>
-            <button onclick="renderCategory('design')">🎨 Design</button>
-            <button onclick="renderCategory('video')">🎥 Video</button>
-            <button onclick="renderCategory('code')">💻 Code</button>
-            <button onclick="renderCategory('research')">🔍 Research</button>
-            <button onclick="renderCategory('marketing')">📈 Marketing</button>
+        <div id="welcomeMsg" class="welcome"></div>
+        <nav class="tabs" id="menu">
+            <button data-cat="chat">🤖 Chat</button>
+            <button data-cat="writing">✍️ Writing</button>
+            <button data-cat="design">🎨 Design</button>
+            <button data-cat="video">🎥 Video</button>
+            <button data-cat="code">💻 Code</button>
+            <button data-cat="research">🔍 Research</button>
+            <button data-cat="marketing">📈 Marketing</button>
         </nav>
     </header>
-
     <main id="content" class="dashboard"></main>
-
     <script type="module" src="script.js"></script>
 </body>
 </html>
+
 
 
