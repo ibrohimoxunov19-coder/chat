@@ -1,16 +1,11 @@
 body { background-color: #0f172a; color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; }
-h1 { text-align: center; color: #38bdf8; margin-bottom: 30px; }
-.tabs { display: flex; gap: 10px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; }
-button { 
-    background: #1e293b; color: white; border: 1px solid #334155; 
-    padding: 12px 20px; cursor: pointer; border-radius: 8px; transition: 0.3s;
-}
-button:hover { background: #38bdf8; border-color: #38bdf8; }
+.auth-btn { position: absolute; top: 20px; right: 20px; background: #38bdf8; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; color: white; font-weight: bold; }
+h1 { text-align: center; color: #38bdf8; }
+.welcome { text-align: center; margin: 15px 0; font-size: 1.2rem; color: #94a3b8; }
+.tabs { display: flex; gap: 10px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
+button { background: #1e293b; color: white; border: 1px solid #334155; padding: 10px 15px; cursor: pointer; border-radius: 8px; }
+button:hover { background: #38bdf8; }
 .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-.tool-card { 
-    background: #1e293b; padding: 25px; border-radius: 12px; 
-    text-decoration: none; color: white; text-align: center; border: 1px solid #334155;
-    transition: 0.3s;
-}
-.tool-card:hover { border-color: #38bdf8; transform: translateY(-5px); }
+.tool-card { background: #1e293b; padding: 20px; border-radius: 10px; text-decoration: none; color: white; text-align: center; border: 1px solid #334155; }
+.tool-card:hover { border-color: #38bdf8; }
 
