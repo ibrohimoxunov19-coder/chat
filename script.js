@@ -15,13 +15,62 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 const db = {
-    chat: [{name: "ChatGPT", url: "https://chatgpt.com"}, {name: "Gemini", url: "https://gemini.google.com"}],
-    writing: [{name: "Grammarly", url: "https://grammarly.com"}, {name: "QuillBot", url: "https://quillbot.com"}],
-    design: [{name: "Canva", url: "https://canva.com"}, {name: "Midjourney", url: "https://midjourney.com"}],
-    video: [{name: "Veed.io", url: "https://veed.io"}, {name: "HeyGen", url: "https://heygen.com"}],
-    code: [{name: "Cursor", url: "https://cursor.com"}, {name: "GitHub Copilot", url: "https://github.com"}],
-    research: [{name: "Elicit", url: "https://elicit.com"}, {name: "ChatPDF", url: "https://chatpdf.com"}],
-    marketing: [{name: "Semrush", url: "https://semrush.com"}, {name: "AdCopy", url: "https://adcopy.ai"}]
+    chat: [
+        {name: "ChatGPT", url: "https://chatgpt.com"},
+        {name: "Gemini", url: "https://gemini.google.com"},
+        {name: "Claude", url: "https://claude.ai"},
+        {name: "DeepSeek", url: "https://deepseek.com"},
+        {name: "Grok", url: "https://grok.com"},
+        {name: "Perplexity", url: "https://perplexity.ai"}
+    ],
+    writing: [
+        {name: "Grammarly", url: "https://grammarly.com"},
+        {name: "QuillBot", url: "https://quillbot.com"},
+        {name: "CopyAI", url: "https://copy.ai"},
+        {name: "Notion AI", url: "https://notion.so"},
+        {name: "Jasper", url: "https://jasper.ai"},
+        {name: "Writer", url: "https://writer.com"}
+    ],
+    design: [
+        {name: "Canva", url: "https://canva.com"},
+        {name: "Midjourney", url: "https://midjourney.com"},
+        {name: "Leonardo", url: "https://leonardo.ai"},
+        {name: "Ideogram", url: "https://ideogram.ai"},
+        {name: "Adobe Firefly", url: "https://adobe.com/firefly"},
+        {name: "Figma", url: "https://figma.com"}
+    ],
+    video: [
+        {name: "Veed.io", url: "https://veed.io"},
+        {name: "HeyGen", url: "https://heygen.com"},
+        {name: "InVideo", url: "https://invideo.io"},
+        {name: "Descript", url: "https://descript.com"},
+        {name: "Suno", url: "https://suno.com"},
+        {name: "Runway", url: "https://runwayml.com"}
+    ],
+    code: [
+        {name: "Cursor", url: "https://cursor.com"},
+        {name: "GitHub Copilot", url: "https://github.com"},
+        {name: "Replit", url: "https://replit.com"},
+        {name: "Claude Dev", url: "https://claude.ai"},
+        {name: "Tabnine", url: "https://tabnine.com"},
+        {name: "Codeium", url: "https://codeium.com"}
+    ],
+    research: [
+        {name: "Elicit", url: "https://elicit.com"},
+        {name: "ChatPDF", url: "https://chatpdf.com"},
+        {name: "Consensus", url: "https://consensus.app"},
+        {name: "SciSpace", url: "https://typeset.io"},
+        {name: "Perplexity", url: "https://perplexity.ai"},
+        {name: "Semantic Scholar", url: "https://semanticscholar.org"}
+    ],
+    marketing: [
+        {name: "Semrush", url: "https://semrush.com"},
+        {name: "AdCopy", url: "https://adcopy.ai"},
+        {name: "Surfer SEO", url: "https://surferseo.com"},
+        {name: "HubSpot AI", url: "https://hubspot.com"},
+        {name: "Buffer", url: "https://buffer.com"},
+        {name: "Canva Marketing", url: "https://canva.com"}
+    ]
 };
 
 // Login/Logout logikasi
